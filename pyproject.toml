@@ -1,0 +1,40 @@
+[project]
+name = "yt-transcript-extractor"
+version = "14.1.0"
+description = "Extract transcripts from an entire YouTube channel and export to Excel, SQLite, TSV, and LLM-ready JSONL."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Your Name", email = "you@example.com" }]
+keywords = ["youtube", "transcript", "yt-dlp", "llm", "dataset", "subtitles"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "yt-dlp>=2024.1.1",
+    "youtube-transcript-api>=0.6.1",
+    "openpyxl>=3.1.2",
+    "nest-asyncio>=1.5.8",
+    "langdetect>=1.0.9",
+    "tqdm>=4.66.1",
+]
+
+[project.optional-dependencies]
+dev = ["ruff", "black", "mypy"]
+
+[project.scripts]
+yt-transcripts = "yt_transcript_extractor:main"
+
+[project.urls]
+Homepage = "https://github.com/USERNAME/yt-transcript-extractor"
+Issues = "https://github.com/USERNAME/yt-transcript-extractor/issues"
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
